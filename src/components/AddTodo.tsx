@@ -4,7 +4,7 @@ import { AppState } from "../app.tsx";
 import type { AppStateType } from "../state.ts";
 
 export default function AddTodo() {
-  const { newtodo, addTodo} = useContext<AppStateType>(AppState);
+  const { newtodo, addTodo } = useContext<AppStateType>(AppState);
   return (
     <form onSubmit={addTodo}>
       <label htmlFor="todo">

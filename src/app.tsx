@@ -1,7 +1,7 @@
 import { createContext } from "react";
 import AddTodo from "./components/AddTodo.tsx";
 import TodoList from "./components/TodoList.tsx";
-import state, {type AppStateType} from "./state.ts";
+import state, { type AppStateType } from "./state.ts";
 
 export const AppState = createContext<AppStateType>({} as AppStateType);
 

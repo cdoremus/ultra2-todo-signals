@@ -8,8 +8,6 @@ const server = await createServer({
 });
 
 server.get("*", async (context) => {
-
-
   /**
    * Render the request
    */

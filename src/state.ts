@@ -18,8 +18,7 @@ export type AppStateType = {
   newtodo: TodoSignal;
   addTodo: AddTodoFunction;
   removeTodo: RemoveTodoFunction;
-}
-
+};
 
 function createAppState(): AppStateType {
   const todos: TodosSignal = signal([]);
