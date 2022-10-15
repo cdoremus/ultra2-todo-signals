@@ -1,4 +1,4 @@
-name: Deno Deploy Action
+name: Deploy
 on: [push]
 
 jobs:
@@ -11,12 +11,7 @@ jobs:
 
     steps:
       - name: Clone repository
-        uses: actions/checkout@v2
-
-      - name: Install Deno
-        uses: denoland/setup-deno@main
-        with:
-          deno-version: 1.26.1
+        uses: actions/checkout@v3
 
       - name: Build site
         run: deno run -A ./build.ts
@@ -24,7 +19,7 @@ jobs:
       - name: Upload to Deno Deploy
         uses: denoland/deployctl@v1
         with:
-          project: "ultra2-todo-signals"
+          project: "ultra2-todo-signals" # deploy project name
           entrypoint: "server.js"
           root: .ultra
           import-map: importMap.server.json
