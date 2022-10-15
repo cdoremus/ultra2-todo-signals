@@ -6,12 +6,11 @@ import state, { type AppStateType } from "./state.ts";
 export const AppState = createContext<AppStateType>({} as AppStateType);
 
 export default function App() {
-  console.log("Hello world!");
   return (
     <html lang="en">
       <head>
         <meta charSet="utf-8" />
-        <title>Ultra</title>
+        <title>Ultra 2.0 Todos</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="shortcut icon" href="/favicon.ico" />
         <link rel="stylesheet" href="/style.css" />
@@ -20,7 +19,7 @@ export default function App() {
         <main>
           <AppState.Provider value={state}>
             <div className="App">
-              <h1>Todos</h1>
+              <h1>Ultra 2.0 Todos</h1>
               <TodoList />
               <AddTodo />
             </div>
