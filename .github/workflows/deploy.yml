@@ -16,6 +16,11 @@ jobs:
       - name: Build site
         run: deno run -A ./build.ts
 
+      - name: Install Deno
+        uses: denoland/setup-deno@main
+        with:
+          deno-version: 1.25.1
+
       - name: Upload to Deno Deploy
         uses: denoland/deployctl@v1
         with:

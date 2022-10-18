@@ -1,4 +1,5 @@
 import { createContext } from "react";
+import useAsset from "ultra/hooks/use-asset.js";
 import AddTodo from "./components/AddTodo.tsx";
 import TodoList from "./components/TodoList.tsx";
 import state, { type AppStateType } from "./state.ts";
@@ -12,8 +13,8 @@ export default function App() {
         <meta charSet="utf-8" />
         <title>Ultra 2.0 Todos</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="shortcut icon" href="/favicon.ico" />
-        <link rel="stylesheet" href="/style.css" />
+        <link rel="shortcut icon" href={useAsset("/favicon.ico")} />
+        <link rel="stylesheet" href={useAsset("/style.css")} />
       </head>
       <body>
         <main>

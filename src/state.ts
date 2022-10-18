@@ -1,5 +1,5 @@
 import React from "react";
-import { signal } from "preact/signals-react@1.1.1";
+import { signal } from "signals-react";
 
 export type TodosSignal = {
   value: string[];
